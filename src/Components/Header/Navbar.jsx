@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 <index className="css"></index>
 
 const Navbar = () => {
     return (
         <div>
-            <nav>
-                <ul className="flex gap-5">
+            <nav className="flex justify-between items-center py-12 px-24 shadow-md">
+                <Logo></Logo>
+                <ul className="flex gap-10">
                     <li className="text-2xl font-medium text-[#0B0B0B]">
                     <NavLink to="/"
                     className={({ isActive, isPending }) =>
