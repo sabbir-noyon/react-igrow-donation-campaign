@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, } from "react-router-dom";
 import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Donation from "../Pages/Donation/Donation";
@@ -11,7 +11,9 @@ const myCreatedRouter = createBrowserRouter([
         children:[
             {
              path:"/",
-             element:<Home></Home>
+             element:<Home></Home>,
+             loader: ()=> fetch('/public/data.json')
+            
             },
 
             {

@@ -48,6 +48,113 @@
       "categoryBg":"#F8714733",
       "textColors":"#F87147"
 
+    },
+
+    {
+      "id": 4,
+      "category": "Food",
+      "img": "Food_Image_1.png",
+      "imgTwo":"Food_Image_2.png",
+      "title": "Better Food for Everyone",
+      "description": "Support initiatives to provide nutritious food to families facing hunger. Access to healthy food is a fundamental human right, and your contribution can help fight hunger.",
+      "price": 290,
+      "cardColorBg":"#F8714726",
+      "categoryBg":"#F8714733",
+      "textColors":"#F87147"
+
+    },
+
+    {
+      "id": 3,
+      "category": "Clothing",
+      "img": "Clothing_Image_1.png",
+      "imgTwo":"Clothing_Image_2.png",
+      "title": "Used Clothing Drive",
+      "description": "Donate gently used clothing to those in need. Warmth and dignity come with every piece of clothing shared. Help us make a difference in the lives of people who need it most.",
+      "price": 290,
+      "cardColorBg":"#79C23F26",
+      "categoryBg":"#79C233",
+      "textColors":"#79C23F"
+    },
+
+    {
+      "id": 2,
+      "category": "Education",
+      "img": "Education_Image_1.png",
+      "imgTwo":"Education_Image_2.png",
+      "title": "Good education",
+      "description": "Support quality education initiatives to empower children with knowledge and skills. Education is the key to a brighter future, and your support can help shape young minds.",
+      "price": 290,
+      "cardColorBg":"#FF444A26",
+      "categoryBg":"#FF444A33",
+      "textColors":"#FF444A"
+
+    },
+
+    {
+      "id": 1,
+      "category": "Health",
+      "img": "Health_Image_1.png",
+      "imgTwo":"Health_Image_2.png",
+      "title": "Clean water for children",
+      "description": "Provide clean and safe drinking water to children in need. Access to clean water is essential for good health and can prevent waterborne diseases. Your contribution will make a difference in their lives.",
+      "price": 290,
+      "cardColorBg": "#0022FFFF26",
+      "categoryBg":"#0022FFFF33",
+      "textColors":"#0053FF"
+    },
+
+    {
+      "id": 1,
+      "category": "Health",
+      "img": "Health_Image_1.png",
+      "imgTwo":"Health_Image_2.png",
+      "title": "Clean water for children",
+      "description": "Provide clean and safe drinking water to children in need. Access to clean water is essential for good health and can prevent waterborne diseases. Your contribution will make a difference in their lives.",
+      "price": 290,
+      "cardColorBg": "#0022FFFF26",
+      "categoryBg":"#0022FFFF33",
+      "textColors":"#0053FF"
+    },
+    {
+      "id": 2,
+      "category": "Education",
+      "img": "Education_Image_1.png",
+      "imgTwo":"Education_Image_2.png",
+      "title": "Good education",
+      "description": "Support quality education initiatives to empower children with knowledge and skills. Education is the key to a brighter future, and your support can help shape young minds.",
+      "price": 290,
+      "cardColorBg":"#FF444A26",
+      "categoryBg":"#FF444A33",
+      "textColors":"#FF444A"
+
+    },
+    {
+      "id": 3,
+      "category": "Clothing",
+      "img": "Clothing_Image_1.png",
+      "imgTwo":"Clothing_Image_2.png",
+      "title": "Used Clothing Drive",
+      "description": "Donate gently used clothing to those in need. Warmth and dignity come with every piece of clothing shared. Help us make a difference in the lives of people who need it most.",
+      "price": 290,
+      "cardColorBg":"#79C23F26",
+      "categoryBg":"#79C233",
+      "textColors":"#79C23F"
+    },
+    {
+      "id": 4,
+      "category": "Food",
+      "img": "Food_Image_1.png",
+      "imgTwo":"Food_Image_2.png",
+      "title": "Better Food for Everyone",
+      "description": "Support initiatives to provide nutritious food to families facing hunger. Access to healthy food is a fundamental human right, and your contribution can help fight hunger.",
+      "price": 290,
+      "cardColorBg":"#F8714726",
+      "categoryBg":"#F8714733",
+      "textColors":"#F87147"
+
     }
+
+    
   ]
   
