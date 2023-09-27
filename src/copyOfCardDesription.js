@@ -63,7 +63,7 @@ const CardDescription = ({ newData }) => {
                 <img className="lg:w-[1400px] lg:h-[700px] my-0 mx-auto" src={newData.category === 'Health'? '../../public/health-rec.png': newData.category === 'Education'? '../../public/Rectangle 4288.png': newData.category === 'Clothing'? '../../public/cloth-rec.png': newData.category === 'Food'? '../../public/food-rec.png': '' } alt={newData.category} />
 
                 {/* The overlay */}
-                <div className=" absolute bottom-0 left-[260px] lg:w-[1400px] lg:h-[130px] bg-opacity-50 bg-black">
+                <div className=" absolute bottom-0 left-[254px] lg:w-[1400px] lg:h-[130px] bg-opacity-50 bg-black">
                     {/* Inside the overlay */}
                     <button onClick={handleDonate} className="  hover:bg-[#d0290c] lg:mt-[37px] ml-[] lg:ml-[37px] rounded-[4px] lg:w-[179px] lg:h-[56px] bg-[#FF444A] text-[16px] md:text-[20px] lg:text-[20px] font-medium md:font-semibold  lg:font-semibold px-4 py-2 lg:px-4 lg:py-2 text-white" type="submit" style={{backgroundColor:newData.categoryBg}} >Donate ${newData.price}</button>
                 </div>

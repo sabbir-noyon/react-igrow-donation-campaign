@@ -7,7 +7,7 @@ const Home = () => {
 
     const dataForCards = useLoaderData();
 
-    console.log(dataForCards);
+    //console.log(dataForCards);
 
 
 
