@@ -18,7 +18,7 @@ const CardDescription = ({ newData }) => {
         if(!donatedMoney) {
             addedDonateArray.push(newData)
             localStorage.setItem('donated',JSON.stringify(addedDonateArray))
-            swal("First Time ?!", "You clicked the button!", "success");
+            swal("Thank you For Donation !", "You have donated successfully!", "success");
 
         }
 
@@ -31,12 +31,12 @@ const CardDescription = ({ newData }) => {
                 addedDonateArray.push(...donatedMoney,newData) 
 
             localStorage.setItem('donated',JSON.stringify(addedDonateArray))
-            swal("Good job!", "You clicked the button!", "success");
+            swal("Thank you For Donation !", "You have donated successfully!", "success");
 
             }
 
             else{
-                swal("ERROR !!", "You donation has received!", "success");
+                swal("Already Donated !", "You've already donated!", "error");
             }
             
 
