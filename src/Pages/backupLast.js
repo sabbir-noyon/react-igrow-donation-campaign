@@ -36,7 +36,7 @@ const CardDescription = ({ newData }) => {
             }
 
             else{
-                swal("ERROR !!", "You donation has received!", "success");
+                swal("Fuck", "You donation has received!", "success");
             }
             
 
