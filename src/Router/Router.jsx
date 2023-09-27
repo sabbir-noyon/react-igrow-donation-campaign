@@ -3,11 +3,13 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Donation from "../Pages/Donation/Donation";
 import Statistics from "../Pages/Statistics/Statistics";
+import EachCard from "../Pages/EachCard/EachCard";
 
 const myCreatedRouter = createBrowserRouter([
     {
         path:"/",
         element:<MainLayout></MainLayout>,
+        
         children:[
             {
              path:"/",
@@ -24,6 +26,12 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path:"/statistics",
                 element:<Statistics></Statistics>
+            },
+
+            {
+                path:"/dataForCards/:category",
+                element:<EachCard></EachCard>,
+                loader: ()=> fetch("/public/data.json")
             }
         ]
 

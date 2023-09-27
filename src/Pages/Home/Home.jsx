@@ -14,7 +14,8 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Cards key={dataForCards.id} dataForCards={dataForCards}></Cards>
+            <Cards key={dataForCards.category} dataForCards={dataForCards}></Cards>
+            
             
           
 
