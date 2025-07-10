@@ -109,12 +109,12 @@
   },
   {
     "id": 10,
-    "category": "Technology Access",
-    "img": "technology-1.png",
-    "imgTwo": "technology-2.png",
-    "title": "Tech for Students",
-    "description": "Provide laptops and internet access to students in underserved areas for remote learning.",
-    "price": 55,
+    "category": "Hygiene",
+    "img": "hygiene-1.png",
+    "imgTwo": "hygiene-2.png",
+    "title": "Promote Hygiene for All",
+    "description": "Distribute hygiene kits and promote healthy habits to prevent illness among underprivileged children.",
+    "price": 20,
     "cardColorBg": "#2979FF26",
     "categoryBg": "#2979FF33",
     "textColors": "#2979FF"

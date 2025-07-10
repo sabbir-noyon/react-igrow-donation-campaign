@@ -3,7 +3,17 @@ import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const CardDescription = ({ newData }) => {
   const navigate = useNavigate();
-  const { id, category, img, title, cardColorBg, categoryBg, textColors, price, description } = newData || {};
+  const {
+    id,
+    category,
+    img,
+    title,
+    cardColorBg,
+    categoryBg,
+    textColors,
+    price,
+    description
+  } = newData || {};
 
   const handleDonate = () => {
     const addedDonateArray = [];
@@ -51,16 +61,26 @@ const CardDescription = ({ newData }) => {
       {/* Content */}
       <div className="lg:px-64 px-4 lg:pb-20 pb-12 lg:pt-16 pt-8 text-center">
         <h1 className="text-3xl lg:text-5xl font-extrabold text-[#1A1A1A] mb-6">
-          {newData.title}
+          {title}
         </h1>
+
         <p className="text-base lg:text-xl text-[#3C3C3C] leading-relaxed tracking-wide mb-8">
           {description}
         </p>
 
-        {/* ✅ Centered Button Below */}
+        {/* ✅ Donation Amount Display */}
+        {price && (
+          <div className="mb-5 mt-14">
+            <p className="text-[#009444] text-xl lg:text-2xl font-semibold">
+              💰 <span className="text-[#009444] font-bold">Amount:</span> ${price}
+            </p>
+          </div>
+        )}
+
+        {/* Donate Button */}
         <button
           onClick={handleDonate}
-          className="bg-[#009444] hover:bg-[#007a37] hover:bg-opacity-90 transition-all duration-200 text-white mt-8 rounded-md px-6 py-3 text-lg font-semibold"
+          className="bg-[#009444] hover:bg-[#007a37] hover:bg-opacity-90 transition-all duration-200 text-white mt-4 rounded-md px-6 py-3 text-lg font-semibold"
           type="button"
         >
           Press here to donate
