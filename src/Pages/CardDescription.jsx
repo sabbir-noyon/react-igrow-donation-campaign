@@ -1,88 +1,73 @@
-import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const CardDescription = ({ newData }) => {
+  const navigate = useNavigate();
+  const { id, category, img, title, cardColorBg, categoryBg, textColors, price, description } = newData || {};
 
-    const {id, category,img,title,cardColorBg,categoryBg,textColors} = newData || {}
-    
+  const handleDonate = () => {
+    const addedDonateArray = [];
+    const donatedMoney = JSON.parse(localStorage.getItem('donated'));
 
-
-    const handleDonate = ()=>{
-        // console.log(newData);
-        // localStorage.setItem('test', 'hints');
-
-        const addedDonateArray = [];
-
-        const donatedMoney = JSON.parse(localStorage.getItem('donated'));
-
-        if(!donatedMoney) {
-            addedDonateArray.push(newData)
-            localStorage.setItem('donated',JSON.stringify(addedDonateArray))
-            swal("Thank you For Donation !", "You have donated successfully!", "success");
-
-        }
-
-        else{
-
-            const isExist = donatedMoney.find(newData=>newData.category==category)
-
-            if(!isExist){
-
-                addedDonateArray.push(...donatedMoney,newData) 
-
-            localStorage.setItem('donated',JSON.stringify(addedDonateArray))
-            swal("Thank you For Donation !", "You have donated successfully!", "success");
-
-            }
-
-            else{
-                swal("Already Donated !", "You've already donated!", "error");
-            }
-            
-
-        }
-
-
-
-
-
-
-
-
-
+    if (!donatedMoney) {
+      addedDonateArray.push(newData);
+      localStorage.setItem('donated', JSON.stringify(addedDonateArray));
+    } else {
+      const isExist = donatedMoney?.find(item => item.id == id);
+      if (!isExist) {
+        addedDonateArray.push(...donatedMoney, newData);
+        localStorage.setItem('donated', JSON.stringify(addedDonateArray));
+      }
     }
 
+    navigate('/donation');
+  };
 
+  return (
+    <>
+      {/* Banner Image */}
+      <div className="relative">
+        <img
+          className="w-full max-h-[700px] object-cover"
+          src={
+            newData.category === 'Health' ? '../../health-rec.png' :
+            newData.category === 'Education' ? '../../Rectangle 4288.png' :
+            newData.category === 'Clothing' ? '../../cloth-rec.png' :
+            newData.category === 'Food' ? '../../food-rec.png' :
+            newData.category === 'Shelter' ? '../../shelter-rec.png' :
+            newData.category === 'Hygiene' ? '../../hygiene-rec.png' :
+            newData.category === 'Employment' ? '../../employment-rec.png' :
+            newData.category === 'Mental Health' ? '../../mental-health-rec.png' :
+            newData.category === 'Disaster Relief' ? '../../disaster-relief-rec.png' :
+            newData.category === 'Technology Access' ? '../../technology-rec.png' :
+            newData.category === 'Women Empowerment' ? '../../women-empowerment-rec.png' :
+            newData.category === 'Environmental Care' ? '../../environment-rec.png' :
+            ''
+          }
+          alt={newData.category}
+        />
+      </div>
 
-  
-    return (
-        <>
-        
-            <div className="relative">
-                {/* The image */}
-                <img className="lg:w-[1400px] lg:h-[700px] my-0 mx-auto" src={newData.category === 'Health'? '../../public/health-rec.png': newData.category === 'Education'? '../../public/Rectangle 4288.png': newData.category === 'Clothing'? '../../public/cloth-rec.png': newData.category === 'Food'? '../../public/food-rec.png': '' } alt={newData.category} />
+      {/* Content */}
+      <div className="lg:px-64 px-4 lg:pb-20 pb-12 lg:pt-16 pt-8 text-center">
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-[#1A1A1A] mb-6">
+          {newData.title}
+        </h1>
+        <p className="text-base lg:text-xl text-[#3C3C3C] leading-relaxed tracking-wide mb-8">
+          {description}
+        </p>
 
-                {/* The overlay */}
-                <div className=" absolute bottom-0 left-[260px] lg:w-[1400px] lg:h-[130px] bg-opacity-50 bg-black">
-                    {/* Inside the overlay */}
-                    <button onClick={handleDonate} className="  hover:bg-[#d0290c] lg:mt-[37px] ml-[] lg:ml-[37px] rounded-[4px] lg:w-[179px] lg:h-[56px] bg-[#FF444A] text-[16px] md:text-[20px] lg:text-[20px] font-medium md:font-semibold  lg:font-semibold px-4 py-2 lg:px-4 lg:py-2 text-white" type="submit" style={{backgroundColor:newData.categoryBg}} >Donate ${newData.price}</button>
-                </div>
-                
-            </div>
-
-            <div className="lg:px-64 lg:pb-20 pb-10 lg:pt-0">
-                <h1 className=" text-center md:text-left lg:text-left lg:mt-14 mt-6 text-[30px] lg:text-[40px] font-bold text-[#0B0B0B]">{newData.title}</h1>
-                <p className="lg:mt-6 mt-4 text-[18px] text-[#0B0B0B] font-normal">{newData.description}</p>
-
-            </div>
-
-        </>
-
-        
-            
-
-
-    );
+        {/* ✅ Centered Button Below */}
+        <button
+          onClick={handleDonate}
+          className="bg-[#009444] hover:bg-[#007a37] hover:bg-opacity-90 transition-all duration-200 text-white mt-8 rounded-md px-6 py-3 text-lg font-semibold"
+          type="button"
+        >
+          Press here to donate
+        </button>
+      </div>
+    </>
+  );
 };
 
 export default CardDescription;

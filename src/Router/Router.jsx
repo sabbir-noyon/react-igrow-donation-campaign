@@ -1,4 +1,4 @@
-import { createBrowserRouter, } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Donation from "../Pages/Donation/Donation";
@@ -7,38 +7,32 @@ import EachCard from "../Pages/EachCard/EachCard";
 import Error from "../Pages/Error";
 
 const myCreatedRouter = createBrowserRouter([
-    {
-        path:"/",
-        element:<MainLayout></MainLayout>,
-        errorElement:<Error></Error>,
-        
-        children:[
-            {
-             path:"/",
-             element:<Home></Home>,
-             loader: ()=> fetch('/public/data.json')
-            
-            },
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <Error />,
 
-            {
-                path:"/donation",
-                element:<Donation></Donation>
-            },
-
-            {
-                path:"/statistics",
-                element:<Statistics></Statistics>
-            },
-
-            {
-                path:"/dataForCards/:category",
-                element:<EachCard></EachCard>,
-                loader: ()=> fetch("/public/data.json")
-            }
-        ]
-
-    },
-])
-  
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        loader: () => fetch("/data.json")
+      },
+      {
+        path: "/donation",
+        element: <Donation />
+      },
+      {
+        path: "/statistics",
+        element: <Statistics />
+      },
+      {
+        path: "/dataForCards/:category",
+        element: <EachCard />,
+        loader: () => fetch("/data.json")
+      }
+    ]
+  }
+]);
 
 export default myCreatedRouter;

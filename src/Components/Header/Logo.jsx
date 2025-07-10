@@ -1,10 +1,7 @@
-
-
 const Logo = () => {
     return (
-        <div className="w-64 mb-10 lg:mb-0">
-            <img  src="/public/images/Logo.png"></img>
-            
+        <div className="w-40 lg:w-44 mb-10 mt-6 lg:mb-0 lg:mt-0">
+            <img  src="/images/Logo.png"></img>    
         </div>
     );
 };
