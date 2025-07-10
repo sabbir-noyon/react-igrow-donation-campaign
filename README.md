@@ -6,7 +6,7 @@ A visually engaging and interactive **React client-side web application (SPA)** 
 
 ## 🚀 Live Site
 
-🔗 [Visit Live Site](https://your-vercel-live-url-here.vercel.app)
+🔗 [Visit Live Site](https://igrow-donation-campaign.web.app/)
 
 ---
 
@@ -22,21 +22,23 @@ A visually engaging and interactive **React client-side web application (SPA)** 
 
 ---
 
-## 🛠️ Features
+## 🚀 Key Features
 
 - ✅ Clean and Responsive UI (TailwindCSS)
 - ✅ Dynamic Routing using `react-router-dom`
-- ✅ Donation logic with `localStorage` support
-- ✅ SweetAlert integration for beautiful prompts
+- ✅ Donation tracking using `localStorage`
+- ✅ SweetAlert integration
 - ✅ Real-time donation statistics with pie chart (`Recharts`)
 - ✅ Remove or reset donations
 - ✅ Final donation confirmation logic
+- ✅ Category-based card filtering
+- ✅ Real-time total donation calculation
 
 ---
 
 ## ⚙️ Technologies Used
 
-- ⚛️ React (Vite)
+- ⚛️ React.js
 - 🎨 Tailwind CSS
 - 📊 Recharts
 - 🔔 SweetAlert
@@ -51,14 +53,12 @@ To reset donation history (for testing):
 - Scroll to the bottom of the Donation page
 - Click the button: `Reset All Donations`
 
-> *Visible only during development, not for production use.*
-
 ---
 
 ## 💡 Project Status
 
 ✅ Fully functional  
-🛠️ Can be extended in the future
+✅ Can be extended in the future
 
 ---
 
@@ -71,5 +71,3 @@ Tree-shaped — a symbol of growth
 ## 🤝 License
 
 This project is open for practice and learning purposes. Contact the author for permission if reusing for commercial use.
-
----
