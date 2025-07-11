@@ -70,4 +70,4 @@ Tree-shaped — a symbol of growth
 
 ## 🤝 License
 
-This project is open for practice and learning purposes. Contact the author for permission if reusing for commercial use.
+This project is open for practice and learning purposes.
