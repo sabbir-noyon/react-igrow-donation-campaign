@@ -1,5 +1,5 @@
 {
-  "projects": {
-    "default": "igrow-donation-campaign"
-  }
+	"projects": {
+		"default": "igrow-donation-campaign"
+	}
 }

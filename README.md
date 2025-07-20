@@ -4,12 +4,6 @@ A visually engaging and interactive **React client-side web application (SPA)** 
 
 ---
 
-## 🚀 Live Site
-
-🔗 [Visit Live Site](https://igrow-donation-campaign.web.app/)
-
----
-
 ## 🖼️ Screenshots
 
 ### ✅ Desktop View
@@ -50,6 +44,7 @@ A visually engaging and interactive **React client-side web application (SPA)** 
 ## 🧪 Testing Tips
 
 To reset donation history (for testing):
+
 - Scroll to the bottom of the Donation page
 - Click the button: `Reset All Donations`
 
@@ -64,7 +59,7 @@ To reset donation history (for testing):
 
 ## 📛 Logo Idea
 
-Tree-shaped — a symbol of growth  
+Tree-shaped — a symbol of growth
 
 ---
 
