@@ -71,16 +71,16 @@ const CardDescription = ({ newData }) => {
 			</div>
 
 			{/* Content */}
-			<div className="lg:px-64 px-4 lg:pb-20 pb-12 lg:pt-16 pt-8 text-center">
-				<h1 className="font-sans text-3xl lg:text-5xl font-bold text-[#1A1A1A] mb-10">
+			<div className="card-desc-div lg:px-64 px-4 lg:pb-20 pb-12 lg:pt-16 pt-8 text-center">
+				<h1 className="card-desc-heading font-sans text-3xl lg:text-5xl font-bold text-[#1A1A1A] mb-10">
 					{title}
 				</h1>
 
-				<p className="text-base lg:text-xl text-[#3C3C3C] leading-relaxed tracking-wide mb-8">
+				<p className="card-desc-paragraph text-base lg:text-xl text-[#3C3C3C] leading-relaxed tracking-wide mb-8">
 					{description}
 				</p>
 
-				{/* ✅ Donation Amount Display */}
+				{/* Donation Amount Display */}
 				{price && (
 					<div className="mb-5 mt-14">
 						<p className="text-[#009444] text-xl lg:text-2xl font-semibold">
@@ -94,7 +94,7 @@ const CardDescription = ({ newData }) => {
 				{/* Donate Button */}
 				<button
 					onClick={handleDonate}
-					className="bg-[#009444] hover:bg-[#007a37] hover:bg-opacity-90 transition-all duration-200 text-white mt-4 rounded-md px-6 py-3 text-base lg:text-lg font-semibold"
+					className="card-desc-button bg-[#009444] hover:bg-[#007a37] hover:bg-opacity-90 transition-all duration-200 text-white mt-4 rounded-md px-6 py-3 text-base lg:text-lg font-semibold"
 					type="button"
 				>
 					Press here to donate

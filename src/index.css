@@ -9,3 +9,92 @@
 body {
 	font-family: "Inter", sans-serif;
 }
+
+/* Search area */
+@media (max-width: 405px) and (min-width: 360px) {
+	.search-input {
+		padding: 8px 8px !important;
+	}
+	.search-button {
+		padding: 9px 7px !important;
+		font-size: 12px !important;
+	}
+}
+
+@media (max-width: 359px) and (min-width: 300px) {
+	.heading {
+		font-size: 28px;
+	}
+	.search-div {
+		max-width: 100% !important;
+	}
+	.search-input {
+		padding: 5px 8px !important;
+	}
+	.search-button {
+		padding: 6px 3px !important;
+		font-size: 10px !important;
+	}
+	.search-input::placeholder {
+		font-size: 12px !important;
+		padding-left: 2px !important;
+	}
+}
+
+/* Cards */
+@media (max-width: 1408px) and (min-width: 1024px) {
+	.card-wrapper {
+		grid-template-columns: repeat(3, 1fr) !important;
+		gap: 20px !important;
+	}
+
+	.card-wrapper .card {
+		height: 100% !important;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.card-wrapper .card h2,
+	.card-wrapper .card h3,
+	.card-wrapper .card p {
+		font-size: 99% !important;
+	}
+
+	.card-wrapper .card button {
+		font-size: 95% !important;
+		padding: 6px 12px !important;
+	}
+}
+
+/* Card description area*/
+@media (max-width: 1240px) and (min-width: 1024px) {
+	.card-desc-div {
+		padding-left: 80px !important;
+		padding-right: 80px !important;
+	}
+
+	.card-desc-heading {
+		font-size: 42px !important;
+	}
+}
+
+@media (max-width: 405px) and (min-width: 360px) {
+	.card-desc-heading {
+		font-size: 28px;
+	}
+
+	.card-desc-button {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 359px) and (min-width: 300px) {
+	.card-desc-heading {
+		font-size: 23px;
+	}
+
+	.card-desc-button {
+		font-size: 15px;
+	}
+}

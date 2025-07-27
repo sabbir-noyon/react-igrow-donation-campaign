@@ -7,7 +7,7 @@ const Home = () => {
 	const dataForCards = useLoaderData();
 	const [searchText, setSearchText] = useState("");
 
-	// Filter cards based on title or category (case-insensitive)
+	// Filter cards based on title or category
 	const filteredCards = dataForCards.filter(
 		(item) =>
 			item.title.toLowerCase().includes(searchText.toLowerCase()) ||

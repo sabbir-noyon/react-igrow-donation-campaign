@@ -112,7 +112,6 @@ const Donation = () => {
 								{donationComplete ? "Thanks for Donating!" : "Donate Now"}
 							</button>
 
-							{/* ✅ Reset Button (only for dev/testing) */}
 							<div className="mt-6">
 								<button
 									onClick={handleReset}
