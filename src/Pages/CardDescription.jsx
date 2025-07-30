@@ -83,7 +83,7 @@ const CardDescription = ({ newData }) => {
 				{/* Donation Amount Display */}
 				{price && (
 					<div className="mb-5 mt-14">
-						<p className="text-[#009444] text-xl lg:text-2xl font-semibold">
+						<p className="card-desc-donation-paragraph text-[#009444] text-xl lg:text-2xl font-semibold">
 							💰{" "}
 							<span className="text-[#009444] font-bold">Donation Amount:</span>{" "}
 							${price}

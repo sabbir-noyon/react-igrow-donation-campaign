@@ -43,25 +43,30 @@ const Donation = () => {
 	return (
 		<div className="pb-12 lg:pb-24">
 			{noDonation ? (
-				<h1 className="font-mono mt-48 lg:mt-[260px] text-2xl text-center lg:text-3xl text-[#FF444A] font-semibold lg:font-bold flex justify-center items-center">
+				<h1 className="no-donation-text font-mono mt-48 lg:mt-[220px] text-2xl text-center lg:text-3xl text-[#FF444A] font-semibold lg:font-bold flex justify-center items-center">
 					{noDonation}
 				</h1>
 			) : (
 				<>
 					{/* Cards */}
-					<div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 container lg:mt-8 my-0 mx-auto py-2 lg:py-4 px-10 lg:px-24">
+					<div className="donation-card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 container lg:mt-8 mt-6 my-0 mx-auto py-2 lg:py-4 px-10">
 						{donation.map((newData, index) => (
 							<div
 								key={index}
-								className="card w-auto h-auto lg:w-[660px] lg:h-[230px] flex lg:flex-row flex-col flex-wrap"
+								id="card-div"
+								className="card w-auto pb-3 lg:pb-0 h-auto flex lg:flex-row flex-col flex-wrap"
 								style={{ backgroundColor: newData.cardColorBg }}
 							>
 								<img
-									className="w-screen lg:w-fit lg:h-[230px]"
+									id="card-img"
+									className="card-img w-screen lg:w-fit lg:h-[230px]"
 									src={newData.imgTwo}
 									alt={newData.category}
 								/>
-								<div className="lg:ml-6 lg:mt-10 px-4 py-2">
+								<div
+									id="donation-card-texts"
+									className="lg:ml-6 lg:mt-10 px-4 py-2"
+								>
 									<button
 										className="mb-2 px-2 py-1 rounded-sm text-sm"
 										style={{
@@ -71,7 +76,9 @@ const Donation = () => {
 									>
 										{newData.category}
 									</button>
-									<h1 className="text-xl font-semibold">{newData.title}</h1>
+									<h1 id="donation-heading" className="text-xl font-semibold">
+										{newData.title}
+									</h1>
 									<p
 										className="text-lg font-semibold mb-2"
 										style={{ color: newData.textColors }}
@@ -84,7 +91,7 @@ const Donation = () => {
 											setDonation(updated);
 											localStorage.setItem("donated", JSON.stringify(updated));
 										}}
-										className="text-white text-sm bg-red-600 px-3 py-1 rounded hover:bg-red-700 transition"
+										className="donation-remove-button text-white font-semibold text-sm bg-red-600 px-3 py-1 rounded hover:bg-red-700 transition"
 									>
 										Remove
 									</button>
@@ -107,7 +114,7 @@ const Donation = () => {
 									donationComplete
 										? "bg-gray-400 cursor-not-allowed"
 										: "bg-[#009444] hover:bg-green-700"
-								} px-6 py-3 rounded-md text-white font-semibold text-lg transition-all duration-200`}
+								} px-6 py-3 rounded-md text-white font-semibold lg:text-lg text-base transition-all duration-200`}
 							>
 								{donationComplete ? "Thanks for Donating!" : "Donate Now"}
 							</button>
@@ -115,7 +122,7 @@ const Donation = () => {
 							<div className="mt-6">
 								<button
 									onClick={handleReset}
-									className="bg-red-500 hover:bg-red-600 text-white text-sm px-4 py-2 rounded-md transition"
+									className="donation-reset-button bg-red-500 hover:bg-red-600 text-white text-base font-semibold px-4 py-2 rounded-md transition"
 								>
 									Reset All Donations
 								</button>
